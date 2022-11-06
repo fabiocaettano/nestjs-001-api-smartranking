@@ -1,8 +1,5 @@
 # NestJs
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
 <p align="center">
    <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge" #vitrinedev/>
 </p>
@@ -111,3 +108,20 @@ nest -v
 ``` bash
 nest new api-smartranking
 ```
+
+Excluir arquivos do diretório src:
+app.controller e app.services
+
+npm run start:dev
+
+
+``` ts
+import { AppService } from './app.service';
+
+
+
+
+
+
+```
+
