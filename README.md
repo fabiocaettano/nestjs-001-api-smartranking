@@ -1,73 +1,113 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# NestJs
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+<p align="center">
+   <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge" #vitrinedev/>
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Sumário
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+* [Configuração](#configuração)
+  - [Máquina Virtual](##máquina_virtual) 
+  - [Git](##git)	
+  - [NVM](#nvm)	
+  - [NestJs](#nestjs)
+* [Dominio](#dominio)
+* [Entidades](#entidades)
+* [Criar Projeto](#criar_projeto)
 
-## Installation
+## Configuração
 
-```bash
-$ npm install
+### Máquina Virtual
+<p>Utilizado uma Máquina Virtual (Droplet) no serviço da Digital Ocena (Cloud Provider).Recursos:</p>
+<ul>
+<li>-Sistema Operacional Debian;</li>
+<li>1 CPU;</li>
+<li>2GB de memória;</li>
+<li>50 GB de espaço.</li>
+</ul>
+
+### Git
+
+<p>Versionamento do código.</p>
+
+``` bash
+aot update
+apt install git
 ```
 
-## Running the app
 
-```bash
-# development
-$ npm run start
+### NVM
 
-# watch mode
-$ npm run start:dev
+<p>O NVM é um gerenciador de instalação do Node.</p>
 
-# production mode
-$ npm run start:prod
+<p>Instalar NVM:</p>
+
+``` bash
+apt update
+apt install curl
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ~/.profile
+nvm install node
 ```
 
-## Test
+<P>Checar a versão:<p/>
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+``` bash
+node -v
+npm -v
 ```
 
-## Support
+<p>Instalar uma versão especifica do Node:</p>
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```
+nvm install v14.21.1
+```
 
-## Stay in touch
+<p>Selecionar a versão a ser utilizada:</p>
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+``` bash
+nvm use v14.21.1
+```
 
-## License
+<p>[Referência de instalação](https://tecadmin.net/how-to-install-nvm-on-debian-10/)</p>
 
-Nest is [MIT licensed](LICENSE).
+
+### NestJs
+
+<p>Comando para instalar o nestjs</p>
+
+``` bash
+npm i -g @nestjs/cli
+```
+
+<p>Checar a versão: </p>
+
+``` bash
+nest -v
+```
+
+
+## Dominio
+
+<p>Desenvolvimento do backend de um aplicativo que será utilizado por jogadores amadores de :tennis:, e inclusão de um controle de ranking.</p>
+
+## Entidades
+
+- Categorias;
+- Jogadores;
+- Desafios;
+- Partidas;
+- Rankings.
+- Notificações.
+
+
+## Criar o projeto
+
+<p>Comando para criar o projeto, selecionar npm:</p>
+
+``` bash
+nest new api-smartranking
+```
