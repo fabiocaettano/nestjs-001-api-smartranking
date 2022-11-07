@@ -109,19 +109,17 @@ nest -v
 nest new api-smartranking
 ```
 
-Excluir arquivos do diretório src:
-app.controller e app.services
+<p>Excluir arquivos e foldrs do diretório src:</p>
+<ul>
+<li>app.controller</li>
+<li>app.services</li>
+<li>test</li>
+</ul>
 
+<p>Executar o comando abaixo, o cli vai retornar com erro devido a exclusão acima. Basta excluir estas referências dos arquivos app.module.ts e main.ts</p>
+
+``` bash
 npm run start:dev
-
-
-``` ts
-import { AppService } from './app.service';
-
-
-
-
-
-
 ```
+``` ts
 
