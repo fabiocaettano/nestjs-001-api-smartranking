@@ -118,8 +118,42 @@ nest new api-smartranking
 
 <p>Executar o comando abaixo, o cli vai retornar com erro devido a exclusão acima. Basta excluir estas referências dos arquivos app.module.ts e main.ts</p>
 
+<p>Outra alteração a ser realizada é a troca da porta para 8080.</p>
+
+<p> Salvar e executar</p>
+
 ``` bash
 npm run start:dev
 ```
-``` ts
 
+
+## Criar Modulo Jogadores
+
+O comando irá ira criar um arquivo do tipo TypeScriot jogadores.module.ts no diretório "src >> jogadores".
+E irá injetar o módulo Jogadores no arquivo app.module.ts.
+
+``` bash
+nest g module jogadores
+```
+
+## Criar Controller Jogadores
+
+O controller tratar as requisições HTTP.
+A classe Controller será injetada no Modulo Jogadores.
+
+``` bash
+nest g controller jogadores
+```
+
+Excluir o arquivo:
+
+``` bash
+cd src/jogadores
+rm jogadores.controller.spec.ts
+```
+
+Alterar o endpoint na classe Controller:
+
+``` ts
+@Controller('api/v1/jogadores')
+```
