@@ -6,14 +6,14 @@ import { v4 as uuidv4 } from 'uuid'
 @Injectable()
 export class JogadoresService {
 
-    private jogadores: Jogador[]: [];
+    private jogadores: Jogador[]= [];
     
     private readonly logger = new Logger(JogadoresService.name)
 
     async criarAtualizarJogador(criarJogadorDto: CriarJogadorDto): Promise<void>{
-    
-	this.logger.log(`criarJogadorDto: ${criarJogadorDto}`)
-	this.criar(criarJogadorDto)
+
+	 this.criar(criarJogadorDto)
+
     }
    
     private criar (criarJogadorDto: CriarJogadorDto): void{
@@ -29,7 +29,9 @@ export class JogadoresService {
 	    	posicaoRanking: 1, 
 	    	urlFotoJogador: 'www.google.com.br/foto123.jpg'
 	    };
-
+	    
+	    this.logger.log(`criarJogadorDto: ${JSON.stringify(jogador)}`)
+		
 	    this.jogadores.push(jogador);
     }
 }
