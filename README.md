@@ -126,6 +126,12 @@ nest new api-smartranking
 npm run start:dev
 ```
 
+## Dependências
+
+``` bash
+npm install uuid
+```
+
 ## Entidade Jogadores
 
 ### Module
