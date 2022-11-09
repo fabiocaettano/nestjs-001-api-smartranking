@@ -128,7 +128,7 @@ npm run start:dev
 
 ## Entidade Jogadores
 
-### Criar Modulo Jogadores
+### Module
 
 O comando irá ira criar um arquivo do tipo TypeScriot jogadores.module.ts no diretório "src >> jogadores".
 E irá injetar o módulo Jogadores no arquivo app.module.ts.
@@ -137,7 +137,7 @@ E irá injetar o módulo Jogadores no arquivo app.module.ts.
 nest g module jogadores
 ```
 
-### Criar Controller Jogadores
+### Controller
 
 O controller tratar as requisições HTTP.
 A classe Controller será injetada no Modulo Jogadores.
@@ -159,16 +159,26 @@ Alterar o endpoint na classe Controller:
 @Controller('api/v1/jogadores')
 ```
 
-### Classe Interface
+### Interface
 
 ``` bash
 mkdir src/jogadores/interfaces
 touch jogador.interface.ts
 ```
 
-### Classe Dto
+### Dto
 
 ``` bash
 mkdir src/jogadores/dtos
 touch criar-jogador.dtos.ts
+```
+
+### Service
+
+Service é um Provider pois a classe será anotada com o decorator @Injectable.
+O Service irá receber requisições do Controller.
+O Service é injetado no Module Jogadores.
+
+``` bash
+nest g service jogadores
 ```
