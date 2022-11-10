@@ -15,7 +15,14 @@ export class JogadoresService {
 	 this.criar(criarJogadorDto)
 
     }
-   
+    
+    async consultarTodosJogadores(): Promise<Jogador[]>{
+
+	return await this.jogadores;
+    }
+
+
+
     private criar (criarJogadorDto: CriarJogadorDto): void{
     
 	    const { nome, telefoneCelular, email } = criarJogadorDto
