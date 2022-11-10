@@ -12,4 +12,10 @@ export class JogadoresController {
        @Body() criarJogadorDto: CriarJogadorDto){
        await this.jogadoresService.criarAtualizarJogador(criarJogadorDto)
     }		
+
+    async consultarJogadores():Promise<Jogador[]>{
+
+	    return this.jogadoresService.consultarTodosJogadores();
+    
+    }
 }
