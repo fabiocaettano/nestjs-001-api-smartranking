@@ -14,10 +14,10 @@ export class JogadoresService {
 
 	const { email } = criarJogadorDto    
 
-        const jogadorEncontrado = await this.jogadores.find(jogador => jogador.emial === email)
+        const jogadorEncontrado = await this.jogadores.find(jogador => jogador.email === email)
 	
 	if (jogadorEncontrado){
-           this.atualizar()	    
+           this.atualizar(jogadorEncontrado, criarJogadorDto)	    
 	}else{
            this.criar(criarJogadorDto)		    
 	}
@@ -49,6 +49,10 @@ export class JogadoresService {
 	    this.jogadores.push(jogador);
     }
 
+    private atualizar(jogadorEncontrado: Jogador, criarJogadorDto: CriarJogadorDto): void{
+         
+	    const { nome } = criarJogadorDto	    
 
-    private atualizar	    
+	    jogadorEncontrado.nome = nome;
+    }	    
 }
