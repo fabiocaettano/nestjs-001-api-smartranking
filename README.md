@@ -147,6 +147,14 @@ npm run start:dev
 npm install uuid
 ```
 
+<p>Instalar Mongoose:</p>
+ 
+ ``` bash
+npm install @nestjs/mongoose mongoose
+ ```
+
+
+
 ## Entidades
 
 <p>Estas são as entidades que serão utilizadas para o desensvolvimento da aplicação:</p>
