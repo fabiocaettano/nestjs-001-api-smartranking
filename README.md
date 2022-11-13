@@ -4,6 +4,22 @@
    <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge" #vitrinedev/>
 </p>
 
+<p>Objetivo desse laboratório é construir um Backend com NestJS executando numa Cloud Service.</p>
+
+<p>A base do laboratório é de um Curso da Udemy, "Node.js Microservices: NestJS, RabbitMQ and Cloud Services", minitrado pelo Diego Fernandes da Silva.</p>
+
+<p>NestJS é um framework para desenvolivmento de aplicações backend em NodeJS.</p>
+
+<p>Laboratório:</p>
+<ul>
+<li>Implementar Microserviços fazendo uso do package Nest Services;</li>
+<li>Empregar Escabilidade e resiliência ao Backend, fazendo uso de um broker de mensagens;</li>
+<li>Aplicar conceitos de uma arquitetura orientada a eventos;</li>
+<li>Entregar a responsabilidade do processo de autenticação para um serviço seguro, escalável e de baixo custo.</li>
+<li></li>
+</ul>
+
+
 ## Sumário
 
 * [Configuração](#configuração)
@@ -12,8 +28,16 @@
   - [NVM](#nvm)	
   - [NestJs](#nestjs)
 * [Dominio](#dominio)
-* [Entidades](#entidades)
 * [Criar Projeto](#criar_projeto)
+* [Dependências](#dependências)
+* [Entidades](#entidades)
+  - [Jogadores](#jogadores)
+    - [Module](#module)
+    - [Controller](#controller)
+    - [Interface](#interace)
+    - [Dto](#dto)
+    - [Serviece](#service)
+
 
 ## Configuração
 
@@ -69,7 +93,7 @@ nvm install v14.21.1
 nvm use v14.21.1
 ```
 
-<p>[Referência de instalação](https://tecadmin.net/how-to-install-nvm-on-debian-10/)</p>
+<p>![Referência de instalação](https://tecadmin.net/how-to-install-nvm-on-debian-10/) </p>
 
 
 ### NestJs
@@ -90,16 +114,6 @@ nest -v
 ## Dominio
 
 <p>Desenvolvimento do backend de um aplicativo que será utilizado por jogadores amadores de :tennis:, e inclusão de um controle de ranking.</p>
-
-## Entidades
-
-- Categorias;
-- Jogadores;
-- Desafios;
-- Partidas;
-- Rankings.
-- Notificações.
-
 
 ## Criar o projeto
 
@@ -128,13 +142,28 @@ npm run start:dev
 
 ## Dependências
 
+<p>Gerar id para ser utilizado no MongoDb:</p>
+
 ``` bash
 npm install uuid
 ```
 
-## Entidade Jogadores
+## Entidades
 
-### Module
+<p>Estas são as entidades que serão utilizadas para o desensvolvimento da aplicação:</p>
+<ul>
+<li>Categorias</li>
+<li>Jogadores</li>
+<li>Desafios</li>
+<li>Partidas</li>
+<li>Rankings</li>
+<li>Notificações</li>
+</ul>
+
+
+### Jogadores
+
+#### Module
 
 O comando irá ira criar um arquivo do tipo TypeScriot jogadores.module.ts no diretório "src >> jogadores".
 E irá injetar o módulo Jogadores no arquivo app.module.ts.
@@ -143,7 +172,7 @@ E irá injetar o módulo Jogadores no arquivo app.module.ts.
 nest g module jogadores
 ```
 
-### Controller
+#### Controller
 
 O controller tratar as requisições HTTP.
 A classe Controller será injetada no Modulo Jogadores.
@@ -159,27 +188,31 @@ cd src/jogadores
 rm jogadores.controller.spec.ts
 ```
 
-Alterar o endpoint na classe Controller:
+Alterado o endpoint na classe Controller:
 
 ``` ts
 @Controller('api/v1/jogadores')
 ```
 
-### Interface
+#### Interface
+
+É a representação da tabela no MongoDB.
 
 ``` bash
 mkdir src/jogadores/interfaces
 touch jogador.interface.ts
 ```
 
-### Dto
+#### Dto
+
+São os dados informados pelos usuários, nem todos os campos da Interface Jogador serão informados pelo Usuário. A ideia do DTO que ele transporte somnete o que usuário for informar.
 
 ``` bash
 mkdir src/jogadores/dtos
 touch criar-jogador.dtos.ts
 ```
 
-### Service
+#### Service
 
 Service é um Provider pois a classe será anotada com o decorator @Injectable.
 O Service irá receber requisições do Controller.
