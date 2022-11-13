@@ -4,7 +4,7 @@
    <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge" #vitrinedev/>
 </p>
 
-<p>Objetivo desse laboratório é construir um Backend com NestJS executando em Cloud Service.</p>
+<p>Objetivo desse laboratório é construir um Backend com NestJS, executar no Cloud Service.</p>
 
 <p>A base do laboratório é de um Curso da Udemy, "Node.js Microservices: NestJS, RabbitMQ and Cloud Services", minitrado pelo Diego Fernandes da Silva.</p>
 
@@ -22,12 +22,12 @@
 ## Sumário
 
 * [Configuração](#configuração)
-  - [Máquina Virtual](##máquina_virtual) 
+  - [Máquina Virtual](##máquina-virtual) 
   - [Git](##git)	
   - [NVM](#nvm)	
   - [NestJs](#nestjs)
 * [Dominio](#dominio)
-* [Criar Projeto](#criar_projeto)
+* [Criar Projeto](#criar-projeto)
 * [Dependências](#dependências)
 * [Entidades](#entidades)
   - [Jogadores](#jogadores)
@@ -35,7 +35,7 @@
     - [Controller](#controller)
     - [Interface](#interace)
     - [Dto](#dto)
-    - [Serviece](#service)
+    - [Service](#service)
 
 
 ## Configuração
