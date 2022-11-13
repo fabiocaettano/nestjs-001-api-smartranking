@@ -4,7 +4,7 @@
    <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge" #vitrinedev/>
 </p>
 
-<p>Objetivo desse laboratório é construir um Backend com NestJS executando numa Cloud Service.</p>
+<p>Objetivo desse laboratório é construir um Backend com NestJS executando em Cloud Service.</p>
 
 <p>A base do laboratório é de um Curso da Udemy, "Node.js Microservices: NestJS, RabbitMQ and Cloud Services", minitrado pelo Diego Fernandes da Silva.</p>
 
@@ -16,7 +16,6 @@
 <li>Empregar Escabilidade e resiliência ao Backend, fazendo uso de um broker de mensagens;</li>
 <li>Aplicar conceitos de uma arquitetura orientada a eventos;</li>
 <li>Entregar a responsabilidade do processo de autenticação para um serviço seguro, escalável e de baixo custo.</li>
-<li></li>
 </ul>
 
 
