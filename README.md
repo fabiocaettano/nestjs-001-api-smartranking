@@ -1,4 +1,4 @@
-# NestJs
+# NestJS - Framework
 
 <p align="center">
    <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge" #vitrinedev/>
@@ -22,8 +22,8 @@
 ## Sumário
 
 * [Configuração](#configuração)
-  - [Máquina Virtual](##máquina-virtual) 
-  - [Git](##git)	
+  - [Máquina Virtual](#máquina-virtual) 
+  - [Git](#git)	
   - [NVM](#nvm)	
   - [NestJs](#nestjs)
 * [Dominio](#dominio)
@@ -33,7 +33,7 @@
   - [Jogadores](#jogadores)
     - [Module](#module)
     - [Controller](#controller)
-    - [Interface](#interace)
+    - [Interface](#interface)
     - [Dto](#dto)
     - [Service](#service)
 
@@ -114,7 +114,7 @@ nest -v
 
 <p>Desenvolvimento do backend de um aplicativo que será utilizado por jogadores amadores de :tennis:, e inclusão de um controle de ranking.</p>
 
-## Criar o projeto
+## Criar Projeto
 
 <p>Comando para criar o projeto, selecionar npm:</p>
 
