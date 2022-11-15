@@ -95,7 +95,7 @@ nvm install v14.21.1
 nvm use v14.21.1
 ```
 
-<p><img src="https://tecadmin.net/how-to-install-nvm-on-debian-10/">Referência site TecAdmin.net</img>></p>
+<p><a href="https://tecadmin.net/">Referência site TecAdmin.net.</a></p>
 
 
 ### NestJs
@@ -186,6 +186,9 @@ docker-compose --version
 ```
 
 Referência https://linuxize.com/
+<a href="https://linuxize.com/">Referência site Linuxize.</a>
+
+
 
 
 
@@ -202,9 +205,11 @@ nest new api-smartranking
 ```
 
 <p>Dentro do diretório src foi excluido os seguins itens:</p>
-* app.controller
-* app.services
-* test
+<ul>
+<li>app.controller;</li>
+<li>app.services;</li>
+<li>test.</li>
+</ul>
 
 <p>Outra alteração realizada foi a troca da porta para 8080 no "src >> main.ts"</p>
 
@@ -215,6 +220,8 @@ npm run start:dev
 ```
 
 <p>Basta excluir estas referências dos arquivos app.module.ts e main.ts.</p>
+
+
 
 
 
@@ -234,6 +241,8 @@ npm install @nestjs/mongoose mongoose
 
 
 
+
+
 ## Entidades
 
 <p>Estas são as entidades que serão utilizadas para o desensvolvimento da aplicação:</p>
@@ -245,7 +254,6 @@ npm install @nestjs/mongoose mongoose
 <li>Rankings</li>
 <li>Notificações</li>
 </ul>
-
 
 ### Jogadores
 
