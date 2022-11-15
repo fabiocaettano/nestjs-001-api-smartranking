@@ -185,7 +185,6 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
 
-Referência https://linuxize.com/
 <a href="https://linuxize.com/">Referência site Linuxize.</a>
 
 
