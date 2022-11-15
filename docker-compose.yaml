@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  main:
+    build:
+      context: .      
+    ports:
+      - "8080:8080"
+    networks:
+      - node-network
+    command: npm run start:dev
+    env_file:
+      - .env
+    depends_on:
+      - db
+  db:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 
+    networks:
+      - node-network
+networks:
+  node-network:
+    driver: bridge     
