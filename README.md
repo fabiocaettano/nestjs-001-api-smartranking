@@ -26,6 +26,8 @@
   - [Git](#git)	
   - [NVM](#nvm)	
   - [NestJs](#nestjs)
+  - [Docker](#docker)
+  - [Docker-Compose](#docker-compose)
 * [Dominio](#dominio)
 * [Criar Projeto](#criar-projeto)
 * [Dependências](#dependências)
@@ -108,6 +110,80 @@ npm i -g @nestjs/cli
 ``` bash
 nest -v
 ```
+
+### Docker
+
+<p>Atualizar repositório:</p>
+
+``` bash
+apt-get update
+```
+
+<p>Download das dependências:</p>
+
+``` bash
+sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+```
+
+<p>Verificar a integridade da chave GPG key:</p>
+
+``` bash
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+```
+
+<p>Adicionar Docker ao repositório:</p>
+
+``` bash
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian buster stable"
+```
+
+<p>Atualizar repositório:</p>
+
+``` bash
+apt-get update
+```
+
+<p>Instalar:</p>
+
+``` bash
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+<p>Checar o systemctl:</p>
+
+``` bash
+sudo systemctl status docker
+```
+
+<p>Verifiar a versão:</p>
+
+``` bash
+docker -v
+```
+
+<p>![Referência](#https://phoenixnap.com/)</p>
+<p>[Referência](https://phoenixnap.com/)</p>
+
+### Docker-Compose
+
+<p>Download do binário:</p>:
+
+``` bash
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+
+<p>Permissão para executar o binário:</p>
+``` bash
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+<p>Checar a versão:</p>
+``` bash
+docker-compose --version
+```
+
+Referência https://linuxize.com/
+
 
 
 ## Dominio
