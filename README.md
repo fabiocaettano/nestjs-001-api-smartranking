@@ -4,7 +4,7 @@
    <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge" #vitrinedev/>
 </p>
 
-<p>Objetivo desse laboratório é construir um Backend com NestJS, executar no Cloud Service.</p>
+<p>Objetivo desse laboratório é construir um Backend com NestJS, e executar no Cloud Service.</p>
 
 <p>A base do laboratório é de um Curso da Udemy, "Node.js Microservices: NestJS, RabbitMQ and Cloud Services", minitrado pelo Diego Fernandes da Silva.</p>
 
@@ -37,12 +37,15 @@
     - [Controller](#controller)
     - [Interface](#interface)
     - [Dto](#dto)
-    - [Service](#service)
+    - [Service](#service) 
+
+
 
 
 ## Configuração
 
 ### Máquina Virtual
+
 <p>Utilizado uma Máquina Virtual (Droplet) no serviço da Digital Ocena (Cloud Provider).Recursos:</p>
 <ul>
 <li>-Sistema Operacional Debian;</li>
@@ -53,7 +56,7 @@
 
 ### Git
 
-<p>Versionamento do código.</p>
+<p>Versionamento do código:</p>
 
 ``` bash
 aot update
@@ -63,9 +66,7 @@ apt install git
 
 ### NVM
 
-<p>O NVM é um gerenciador de instalação do Node.</p>
-
-<p>Instalar NVM:</p>
+<p>O NVM é um gerenciador de instalação do Node. Instalar:</p>
 
 ``` bash
 apt update
@@ -75,7 +76,7 @@ source ~/.profile
 nvm install node
 ```
 
-<P>Checar a versão:<p/>
+<P>Checar a versão:</p>
 
 ``` bash
 node -v
@@ -84,7 +85,7 @@ npm -v
 
 <p>Instalar uma versão especifica do Node:</p>
 
-```
+``` bash
 nvm install v14.21.1
 ```
 
@@ -94,18 +95,18 @@ nvm install v14.21.1
 nvm use v14.21.1
 ```
 
-<p>![Referência de instalação](https://tecadmin.net/how-to-install-nvm-on-debian-10/) </p>
+<p><img src="https://tecadmin.net/how-to-install-nvm-on-debian-10/">Referência site TecAdmin.net</img>></p>
 
 
 ### NestJs
 
-<p>Comando para instalar o nestjs</p>
+<p>Comando para instalar o nestjs:</p>
 
 ``` bash
 npm i -g @nestjs/cli
 ```
 
-<p>Checar a versão: </p>
+<p>Checar a versão:</p>
 
 ``` bash
 nest -v
@@ -194,28 +195,28 @@ Referência https://linuxize.com/
 
 ## Criar Projeto
 
-<p>Comando para criar o projeto, selecionar npm:</p>
+<p>Comando para criar o projeto, e logo em seguida selecionar npm:</p>
 
 ``` bash
 nest new api-smartranking
 ```
 
-<p>Excluir arquivos e foldrs do diretório src:</p>
-<ul>
-<li>app.controller</li>
-<li>app.services</li>
-<li>test</li>
-</ul>
+<p>Dentro do diretório src foi excluido os seguins itens:</p>
+* app.controller
+* app.services
+* test
 
-<p>Executar o comando abaixo, o cli vai retornar com erro devido a exclusão acima. Basta excluir estas referências dos arquivos app.module.ts e main.ts</p>
+<p>Outra alteração realizada foi a troca da porta para 8080 no "src >> main.ts"</p>
 
-<p>Outra alteração a ser realizada é a troca da porta para 8080.</p>
-
-<p> Salvar e executar</p>
+<p>Executar o comando abaixo, o cli vai retornar com erro devido a exclusão acima.</p> 
 
 ``` bash
 npm run start:dev
 ```
+
+<p>Basta excluir estas referências dos arquivos app.module.ts e main.ts.</p>
+
+
 
 ## Dependências
 
