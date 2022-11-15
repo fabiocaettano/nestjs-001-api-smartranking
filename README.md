@@ -161,8 +161,8 @@ sudo systemctl status docker
 docker -v
 ```
 
-<p>![Referência](#https://phoenixnap.com/)</p>
-<p>[Referência](https://phoenixnap.com/)</p>
+<p>![Referência](https://phoenixnap.com/)</p>
+![Referência](https://phoenixnap.com/)
 
 ### Docker-Compose
 
@@ -173,11 +173,13 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-
 ```
 
 <p>Permissão para executar o binário:</p>
+
 ``` bash
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 <p>Checar a versão:</p>
+
 ``` bash
 docker-compose --version
 ```
