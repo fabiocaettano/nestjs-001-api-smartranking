@@ -161,8 +161,8 @@ sudo systemctl status docker
 docker -v
 ```
 
-<p>![Referência](https://phoenixnap.com/)</p>
-![Referência](https://phoenixnap.com/)
+<a href="https://phoenixnap.com/">Referência site Phoenixnap.</a>
+
 
 ### Docker-Compose
 
