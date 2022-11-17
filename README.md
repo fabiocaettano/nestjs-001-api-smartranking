@@ -31,13 +31,12 @@
 * [Dominio](#dominio)
 * [Criar Projeto](#criar-projeto)
 * [Dependências](#dependências)
-* [Entidades](#entidades)
-  - [Jogadores](#jogadores)
-    - [Module](#module)
-    - [Controller](#controller)
-    - [Interface](#interface)
-    - [Dto](#dto)
-    - [Service](#service) 
+* [Entidades Jogadores](#entidades-jogadores)  
+  - [Module](#module)
+  - [Controller](#controller)
+  - [Interface](#interface)
+  - [Dto](#dto)
+  - [Service](#service) 
 
 
 
@@ -46,7 +45,8 @@
 
 ### Máquina Virtual
 
-<p>Utilizado uma Máquina Virtual (Droplet) no serviço da Digital Ocena (Cloud Provider).Recursos:</p>
+<p>Utilizado uma Máquina Virtual (Droplet) no serviço da Digital Ocena (Cloud Provider).</p>
+<p>Recursos:</p>
 <ul>
 <li>Sistema Operacional Debian 10.4;</li>
 <li>1 CPU;</li>
@@ -58,6 +58,8 @@ Para acessar a máquina virtual:
 ```
 ssh root@ipDaMaquinaVirtual
 ```
+Será solicitado uma senha para acessar a máquina virtual.
+
 
 ### Git
 
@@ -119,7 +121,7 @@ nest -v
 
 ### Docker
 
-<p>Instalar o Docker na máquina v:</p>
+<p>Instalar o Docker na máquina virtual:</p>
 
 ``` bash
 //Atualizar o repositório
@@ -199,13 +201,15 @@ nest new api-smartranking
 
 <p>Outra alteração realizada foi a troca da porta para 8080 no "src >> main.ts"</p>
 
-<p>Executar o comando abaixo, o cli vai retornar com erro devido a exclusão acima.</p> 
+<p>Executar o comando:</p> 
 
 ``` bash
 npm run start:dev
 ```
 
-<p>Basta excluir estas referências dos arquivos app.module.ts e main.ts.</p>
+<p>__O cli vai retornar com erro devido as exclusões acima.__</p> 
+
+<p>**Basta excluir as referências dos arquivos app.module.ts e main.ts aonde foi sinalizado o erro.**</p>
 
 
 
@@ -222,64 +226,63 @@ npm install @nestjs/mongoose mongoose
 ```
 
 
-## Entidades
+## Entidade Jogadores
 
-### Jogadores
+### Module
 
-#### Module
+<p>O comando irá ira criar um arquivo do tipo TypeScript jogadores.module.ts no diretório "src >> jogadores".</p>
 
-O comando irá ira criar um arquivo do tipo TypeScriot jogadores.module.ts no diretório "src >> jogadores".
-E irá injetar o módulo Jogadores no arquivo app.module.ts.
+<p>Será injetado o módulo Jogadores no arquivo app.module.ts.</p>
 
 ``` bash
 nest g module jogadores
 ```
 
-#### Controller
+### Controller
 
-O controller tratar as requisições HTTP.
-A classe Controller será injetada no Modulo Jogadores.
+<p>O controller tratar as requisições HTTP.</p>
+<p>A classe Controller será injetada no Modulo Jogadores.</p>
 
 ``` bash
 nest g controller jogadores
 ```
 
-Excluir o arquivo:
+<p>Excluir o arquivo:</p>
 
 ``` bash
 cd src/jogadores
 rm jogadores.controller.spec.ts
 ```
 
-Alterado o endpoint na classe Controller:
+<p>Alterado o endpoint na classe Controller:</p>
 
 ``` ts
 @Controller('api/v1/jogadores')
 ```
 
-#### Interface
+### Interface
 
-É a representação da tabela no MongoDB.
+<p>É a representação da tabela no MongoDB.</p>
 
 ``` bash
 mkdir src/jogadores/interfaces
 touch jogador.interface.ts
 ```
 
-#### Dto
+### Dto
 
-São os dados informados pelos usuários, nem todos os campos da Interface Jogador serão informados pelo Usuário. A ideia do DTO que ele transporte somnete o que usuário for informar.
+<p>São os dados informados pelos usuários, nem todos os campos da Interface Jogador serão informados pelo Usuário. A ideia do DTO que ele transporte somnete o que usuário for informar.</p>
 
 ``` bash
 mkdir src/jogadores/dtos
 touch criar-jogador.dtos.ts
 ```
 
-#### Service
+### Service
 
-Service é um Provider pois a classe será anotada com o decorator @Injectable.
-O Service irá receber requisições do Controller.
-O Service é injetado no Module Jogadores.
+<p>Service é um Provider pois a classe será anotada com o decorator __@Injectable__.</P>
+<P>O Service irá receber requisições do Controller.</p>
+<p>O Service é injetado no Module Jogadores.</p>
 
 ``` bash
 nest g service jogadores
