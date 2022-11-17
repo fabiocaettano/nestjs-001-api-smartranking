@@ -32,13 +32,11 @@
 * [Criar Projeto](#criar-projeto)
 * [Dependências](#dependências)
 * [Entidades Jogadores](#entidades-jogadores)  
-  - [Module](#module)
-  - [Controller](#controller)
   - [Interface](#interface)
   - [Dto](#dto)
+  - [Module](#module)
+  - [Controller](#controller)  
   - [Service](#service) 
-
-
 
 
 ## Configuração
@@ -240,7 +238,7 @@ npm install @nestjs/mongoose mongoose
 docker-compose up -d --build
 
 //Para excluir os containers
-docker-compose-down
+docker-compose down
 
 //Para visualizar os container em execução (status UP)
 docker-compose ps
@@ -253,6 +251,34 @@ docker-compose logs
 ```
 
 ## Entidade Jogadores
+
+### Interface
+
+<p>É a representação da tabela no MongoDB.</p>
+
+<p>Jogador Interface:</p>
+
+``` bash
+mkdir src/jogadores/interfaces
+touch jogador.interface.ts
+```
+
+<p>Jogador Schema:</p>
+
+``` bash
+mkdir src/jogadores/schema
+touch jogador.schema.ts
+```
+
+### Dto
+
+<p>São os dados informados pelos usuários, nem todos os campos da Interface Jogador serão informados pelo Usuário. A ideia do DTO que ele transporte somnete o que usuário for informar.</p>
+
+``` bash
+mkdir src/jogadores/dtos
+touch criar-jogador.dtos.ts
+```
+
 
 ### Module
 
@@ -284,24 +310,6 @@ rm jogadores.controller.spec.ts
 
 ``` ts
 @Controller('api/v1/jogadores')
-```
-
-### Interface
-
-<p>É a representação da tabela no MongoDB.</p>
-
-``` bash
-mkdir src/jogadores/interfaces
-touch jogador.interface.ts
-```
-
-### Dto
-
-<p>São os dados informados pelos usuários, nem todos os campos da Interface Jogador serão informados pelo Usuário. A ideia do DTO que ele transporte somnete o que usuário for informar.</p>
-
-``` bash
-mkdir src/jogadores/dtos
-touch criar-jogador.dtos.ts
 ```
 
 ### Service
