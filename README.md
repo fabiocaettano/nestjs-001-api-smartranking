@@ -225,6 +225,32 @@ npm install uuid
 npm install @nestjs/mongoose mongoose
 ```
 
+## Container
+
+<p>O arquivo <b>Dockerfile</b> criara uma imagem do node-alpine.</p>
+
+<p>O arquivo <b>docker-compose</b> irá construir 02 containers.</p>
+
+<p>Um container referente ao contexto do Dockerfile, e o outro container referente ao MongoDB</p>
+
+<p>Comandos:</p>
+
+``` bash
+//Para criar os containers
+docker-compose up -d --build
+
+//Para excluir os containers
+docker-compose-down
+
+//Para visualizar os container em execução (status UP)
+docker-compose ps
+
+//Para visualizar as imagens
+docker-compose images
+
+//Caso ocorra problemas para construir o container
+docker-compose logs
+```
 
 ## Entidade Jogadores
 
