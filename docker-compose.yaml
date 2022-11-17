@@ -17,13 +17,14 @@ services:
     depends_on:
       - db
   db:
+    container_name: mongodb      
     image: mongo
     restart: always
     environment:
       MONGO_INITDB_USERNAME: ${MONGO_USER}
       MONGO_INITDB_PASSWORD: ${MONGO_PASSWORD}
     ports:
-      - 27027:27017
+      - 27017:27017
     networks:
       - nestjs-network
 networks:
