@@ -8,7 +8,7 @@ import { Model }from 'mongoose'
 @Injectable()
 export class JogadoresService {
 
-    private jogadores: Jogador[]= [];
+    //private jogadores: Jogador[]= [];
 
 	constructor(@InjectModel('Jogador') private readonly jogadorModel: Model<Jogador>){}
     
@@ -35,24 +35,33 @@ export class JogadoresService {
     }
 
 	async consultarJogadorPeloEmail(email: string): Promise<Jogador>{
+		
+		//const jogadorEncontrado = this.jogadores.find(jogador => jogador.email === email)
 
-		const jogadorEncontrado = this.jogadores.find(jogador => jogador.email === email)
+		const jogadorEncontrado = await this.jogadorModel.findOne({email}).exec();
 
 		if(!jogadorEncontrado){
 			throw new NotFoundException(`Jogador com e-mail ${email} não encontrado.`)
 		}
+
 		return jogadorEncontrado
 	}
 
-	async deletarJogador(email): Promise<void>{
+	async deletarJogador(email): Promise<any>{
 
 		/*const jogadorEncontrado = this.jogadores.find(jogador => jogador.email === email)
 
 		this.jogadores =  this.jogadores.filter(jogador => jogador.email !== jogadorEncontrado.email)*/
 
+		const jogadorEncontrado = await this.jogadorModel.findOne({email}).exec();
+
+		if(!jogadorEncontrado){
+			throw new NotFoundException(`Jogador com e-mail ${email} não encontrado.`)
+		}
+
 		return await this.jogadorModel.remove({email}).exec()
 	}
-
+	
     private async criar (criarJogadorDto: CriarJogadorDto): Promise<Jogador>{
 
 		const jogadorCriado = new this.jogadorModel(criarJogadorDto)
