@@ -2,13 +2,16 @@
 /dist
 /node_modules
 .env
-data/db/*
+data/db/
+data/db
+/data
 
 # Logs
 logs
 *.log
 npm-debug.log*
-pnpm-debug.log*
+pnpm-debug.log
+/data/
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
