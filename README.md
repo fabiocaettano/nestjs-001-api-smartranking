@@ -207,9 +207,9 @@ nest new api-smartranking
 npm run start:dev
 ```
 
-<p>__O cli vai retornar com erro devido as exclusões acima.__</p> 
+<p>O cli vai retornar com erro devido as exclusões acima.</p> 
 
-<p>**Basta excluir as referências dos arquivos app.module.ts e main.ts aonde foi sinalizado o erro.**</p>
+<p><b>Basta excluir as referências dos arquivos app.module.ts e main.ts aonde foi sinalizado o erro.</b></p>
 
 
 
@@ -280,7 +280,7 @@ touch criar-jogador.dtos.ts
 
 ### Service
 
-<p>Service é um Provider pois a classe será anotada com o decorator __@Injectable__.</P>
+<p>Service é um Provider pois a classe será anotada com o decorator <b>@Injectable</b>.</P>
 <P>O Service irá receber requisições do Controller.</p>
 <p>O Service é injetado no Module Jogadores.</p>
 
