@@ -1,11 +1,12 @@
-FROM node:14.21.1 As development
+ARG IMAGE_1=node:16.3-alpine
 
+#Padrão
+FROM $IMAGE_1 As builder
 WORKDIR /usr/src/app
-
 COPY package*.json ./
-
 RUN npm install
-
 COPY . .
 
-EXPOSE 8080
+#Desenvolvimento
+FROM builder as dev
+CMD [""]
