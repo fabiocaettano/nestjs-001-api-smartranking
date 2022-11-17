@@ -48,15 +48,20 @@
 
 <p>Utilizado uma Máquina Virtual (Droplet) no serviço da Digital Ocena (Cloud Provider).Recursos:</p>
 <ul>
-<li>-Sistema Operacional Debian;</li>
+<li>Sistema Operacional Debian 10.4;</li>
 <li>1 CPU;</li>
 <li>2GB de memória;</li>
 <li>50 GB de espaço.</li>
 </ul>
 
+Para acessar a máquina virtual:
+```
+ssh root@ipDaMaquinaVirtual
+```
+
 ### Git
 
-<p>Versionamento do código:</p>
+<p>Instalar o Git na máquina virtual:</p>
 
 ``` bash
 aot update
@@ -66,7 +71,7 @@ apt install git
 
 ### NVM
 
-<p>O NVM é um gerenciador de instalação do Node. Instalar:</p>
+<p>Instalar NVM na máquina virtual para controlar as instalaçoes do Node e Npm:</p>
 
 ``` bash
 apt update
@@ -95,12 +100,12 @@ nvm install v14.21.1
 nvm use v14.21.1
 ```
 
-<p><a href="https://tecadmin.net/">Referência site TecAdmin.net.</a></p>
+<p><a href="https://tecadmin.net/">Referência da instalação obtida no Site TecAdmin.net.</a></p>
 
 
 ### NestJs
 
-<p>Comando para instalar o nestjs:</p>
+<p>Comando para instalar o NestJS na máquina virtual:</p>
 
 ``` bash
 npm i -g @nestjs/cli
@@ -114,86 +119,68 @@ nest -v
 
 ### Docker
 
-<p>Atualizar repositório:</p>
+<p>Instalar o Docker na máquina v:</p>
 
 ``` bash
+//Atualizar o repositório
 apt-get update
-```
 
-<p>Download das dependências:</p>
-
-``` bash
+//Download das dependências
 sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
-```
 
-<p>Verificar a integridade da chave GPG key:</p>
-
-``` bash
+//Verificar a integridade da chave GPG key
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-```
 
-<p>Adicionar Docker ao repositório:</p>
-
-``` bash
+//Adicionar Docker ao repositório
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian buster stable"
-```
 
-<p>Atualizar repositório:</p>
-
-``` bash
+//Atualizar repositório
 apt-get update
-```
 
-<p>Instalar:</p>
-
-``` bash
+//Instalar
 sudo apt-get install docker-ce docker-ce-cli containerd.io
-```
 
-<p>Checar o systemctl:</p>
-
-``` bash
+//Checar o systemctl
 sudo systemctl status docker
-```
 
-<p>Verifiar a versão:</p>
-
-``` bash
+//Verifiar a versão
 docker -v
 ```
 
-<a href="https://phoenixnap.com/">Referência site Phoenixnap.</a>
+<a href="https://phoenixnap.com/">Referência para instalação no Site Phoenixnap.</a>
 
 
 ### Docker-Compose
 
-<p>Download do binário:</p>:
+<p>Instalar na máquina virtual</p>:
 
 ``` bash
+//Download do binário
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-```
 
-<p>Permissão para executar o binário:</p>
-
-``` bash
+//Permissão para executar o binário
 sudo chmod +x /usr/local/bin/docker-compose
-```
 
-<p>Checar a versão:</p>
-
-``` bash
+//Checar a versão
 docker-compose --version
 ```
 
-<a href="https://linuxize.com/">Referência site Linuxize.</a>
-
-
-
+<a href="https://linuxize.com/">Referência para instalação no Site Linuxize.</a>
 
 
 ## Dominio
 
 <p>Desenvolvimento do backend de um aplicativo que será utilizado por jogadores amadores de :tennis:, e inclusão de um controle de ranking.</p>
+
+<p>Estas são as entidades que serão utilizadas para o desensvolvimento da aplicação:</p>
+<ul>
+<li>Categorias</li>
+<li>Jogadores</li>
+<li>Desafios</li>
+<li>Partidas</li>
+<li>Rankings</li>
+<li>Notificações</li>
+</ul>
 
 ## Criar Projeto
 
@@ -222,37 +209,20 @@ npm run start:dev
 
 
 
-
-
 ## Dependências
 
-<p>Gerar id para ser utilizado no MongoDb:</p>
+<p>Instalações necessárias:</p>
 
 ``` bash
+//Gerar id para ser utilizado no MongoDb
 npm install uuid
-```
 
-<p>Instalar Mongoose:</p>
- 
- ``` bash
+//Mongoose
 npm install @nestjs/mongoose mongoose
- ```
-
-
-
+```
 
 
 ## Entidades
-
-<p>Estas são as entidades que serão utilizadas para o desensvolvimento da aplicação:</p>
-<ul>
-<li>Categorias</li>
-<li>Jogadores</li>
-<li>Desafios</li>
-<li>Partidas</li>
-<li>Rankings</li>
-<li>Notificações</li>
-</ul>
 
 ### Jogadores
 
