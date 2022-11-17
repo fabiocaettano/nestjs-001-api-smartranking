@@ -1,5 +1,9 @@
 version: '3.7'
 
+networks:
+  nestjs-network:
+    driver: bridge 
+
 services:
   app:    
     container_name: nestjs    
@@ -25,8 +29,7 @@ services:
       MONGO_INITDB_PASSWORD: ${MONGO_PASSWORD}
     ports:
       - 27017:27017
+    volumes:
+      - ./data/db:/data/db      
     networks:
       - nestjs-network
-networks:
-  nestjs-network:
-    driver: bridge     

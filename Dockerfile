@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm ins:tall
+RUN npm install
 
 COPY . .
 
