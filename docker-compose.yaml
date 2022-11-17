@@ -10,7 +10,8 @@ services:
     build:
       context: .      
       dockerfile: 'Dockerfile'      
-    command: bash -c "npm run start:dev"
+      target: dev
+    command: sh -c "npm run start:dev"
     ports:
       - 8080:8080
     networks:
