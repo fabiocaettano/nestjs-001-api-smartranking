@@ -21,8 +21,8 @@
 
 ## Sumário
 
-* [Configuração](#configuração)
-  - [Máquina Virtual](#máquina-virtual) 
+* [Configuração Máquina Virtual](#configuração-máquina-virtual)
+  - [Droplet](#droplet) 
   - [Git](#git)	
   - [NVM](#nvm)	
   - [NestJs](#nestjs)
@@ -38,12 +38,21 @@
   - [Controller](#controller)  
   - [Service](#service) 
 
+## Configuração Máquina Local
 
-## Configuração
+<p>Recursos:</p>
+<ul>
+<li>WSL - ambiente Linux executando no Windows 10;</li>
+<li>Insomnia - para testar API</li>
+</ul>
 
-### Máquina Virtual
+## Configuração Máquina Virtual
 
-<p>Utilizado uma Máquina Virtual (Droplet) no serviço da Digital Ocena (Cloud Provider).</p>
+<p>A configuração na máquina virtual criada neste laboratório não é abortada no curso.</p>
+
+### Droplet
+
+<p>Criado um Droplet (Máquina Virtual) no serviço da Digital Ocena (Cloud Provider).</p>
 <p>Recursos:</p>
 <ul>
 <li>Sistema Operacional Debian 10.4;</li>
@@ -250,6 +259,7 @@ docker-compose images
 docker-compose logs
 ```
 
+
 ## Entidade Jogadores
 
 ### Interface
@@ -327,3 +337,13 @@ rm jogadores.controller.spec.ts
 ``` bash
 nest g service jogadores
 ```
+
+### EndPoints 
+
+| Verbo  | EndPoint                                      |Observação       |
+|--------|-----------------------------------------------|-----------------|
+|  POST  | http://ipMaquinaVirtual:8080/api/v1/jogadores | Preencher JSON  | 
+|  GET   | http://ipMaquinaVirtual:8080/api/v1/jogadores |                 | 
+|  GET   | http://ipMaquinaVirtual:8080/api/v1/jogadores | Preencher Query | 
+|  DELETE| http://ipMaquinaVirtual:8080/api/v1/jogadores | Preencher Query | 
+
