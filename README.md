@@ -225,7 +225,7 @@ npm install @nestjs/mongoose mongoose
 
 ## Container
 
-<p>O arquivo <b>Dockerfile</b> criara uma imagem do node-alpine.</p>
+<p>O arquivo <b>Dockerfile</b> criará uma imagem do node-alpine.</p>
 
 <p>O arquivo <b>docker-compose</b> irá construir 02 containers.</p>
 
@@ -256,19 +256,14 @@ docker-compose logs
 
 <p>É a representação da tabela no MongoDB.</p>
 
-<p>Jogador Interface:</p>
+<p>Criar arquivos:</p>
 
 ``` bash
 mkdir src/jogadores/interfaces
 touch jogador.interface.ts
-```
-
-<p>Jogador Schema:</p>
-
-``` bash
-mkdir src/jogadores/schema
 touch jogador.schema.ts
 ```
+
 
 ### Dto
 
