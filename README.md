@@ -340,10 +340,18 @@ nest g service jogadores
 
 ### EndPoints 
 
-| Verbo  | EndPoint                                      |Observação       |
-|--------|-----------------------------------------------|-----------------|
-|  POST  | http://ipMaquinaVirtual:8080/api/v1/jogadores | Preencher JSON  | 
-|  GET   | http://ipMaquinaVirtual:8080/api/v1/jogadores |                 | 
-|  GET   | http://ipMaquinaVirtual:8080/api/v1/jogadores | Preencher Query | 
-|  DELETE| http://ipMaquinaVirtual:8080/api/v1/jogadores | Preencher Query | 
+<p>Subir aplicação:</p>
+
+``` sh
+$ npm run start:dev
+```
+
+<p>Executar endpoint no Insomnia:</p>
+
+| Verbo  | EndPoint                                      |Observação                              |
+|--------|-----------------------------------------------|----------------------------------------|
+|  POST  | http://ipMaquinaVirtual:8080/api/v1/jogadores | Preencher JSON com os atributos do dto | 
+|  GET   | http://ipMaquinaVirtual:8080/api/v1/jogadores |                                        | 
+|  GET   | http://ipMaquinaVirtual:8080/api/v1/jogadores | Preencher Query com email              | 
+|  DELETE| http://ipMaquinaVirtual:8080/api/v1/jogadores | Preencher Query com email              | 
 
