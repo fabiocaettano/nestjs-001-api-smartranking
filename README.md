@@ -37,6 +37,7 @@
   - [Module](#module)
   - [Controller](#controller)  
   - [Service](#service) 
+  - [Endpoint](#endpoint) 
 
 ## Configuração Máquina Local
 
@@ -338,7 +339,7 @@ rm jogadores.controller.spec.ts
 nest g service jogadores
 ```
 
-### EndPoints 
+### EndPoint
 
 <p>Subir aplicação:</p>
 
