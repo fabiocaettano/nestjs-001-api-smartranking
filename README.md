@@ -74,8 +74,8 @@ Será solicitado uma senha para acessar a máquina virtual.
 <p>Instalar o Git na máquina virtual:</p>
 
 ``` bash
-aot update
-apt install git
+$ apt update
+$ apt install git
 ```
 
 
@@ -84,30 +84,30 @@ apt install git
 <p>Instalar NVM na máquina virtual para controlar as instalaçoes do Node e Npm:</p>
 
 ``` bash
-apt update
-apt install curl
-curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-source ~/.profile
-nvm install node
+$ apt update
+$ apt install curl
+$ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+$ source ~/.profile
+$ nvm install node
 ```
 
 <P>Checar a versão:</p>
 
 ``` bash
-node -v
-npm -v
+$ node -v
+$ npm -v
 ```
 
 <p>Instalar uma versão especifica do Node:</p>
 
 ``` bash
-nvm install v14.21.1
+$ nvm install v14.21.1
 ```
 
 <p>Selecionar a versão a ser utilizada:</p>
 
 ``` bash
-nvm use v14.21.1
+$ nvm use v14.21.1
 ```
 
 <p><a href="https://tecadmin.net/">Referência da instalação obtida no Site TecAdmin.net.</a></p>
@@ -118,13 +118,13 @@ nvm use v14.21.1
 <p>Comando para instalar o NestJS na máquina virtual:</p>
 
 ``` bash
-npm i -g @nestjs/cli
+$ npm i -g @nestjs/cli
 ```
 
 <p>Checar a versão:</p>
 
 ``` bash
-nest -v
+$ nest -v
 ```
 
 ### Docker
@@ -132,29 +132,29 @@ nest -v
 <p>Instalar o Docker na máquina virtual:</p>
 
 ``` bash
-//Atualizar o repositório
-apt-get update
+#Atualizar o repositório
+$ apt-get update
 
-//Download das dependências
-sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+#Download das dependências
+$ sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 
-//Verificar a integridade da chave GPG key
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+#Verificar a integridade da chave GPG key
+$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 
-//Adicionar Docker ao repositório
-add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian buster stable"
+#Adicionar Docker ao repositório
+$ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian buster stable"
 
-//Atualizar repositório
-apt-get update
+#Atualizar repositório
+$ apt-get update
 
-//Instalar
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+#Instalar
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
-//Checar o systemctl
-sudo systemctl status docker
+#Checar o systemctl
+$ sudo systemctl status docker
 
-//Verifiar a versão
-docker -v
+#Verifiar a versão
+$ docker -v
 ```
 
 <a href="https://phoenixnap.com/">Referência para instalação no Site Phoenixnap.</a>
@@ -165,14 +165,14 @@ docker -v
 <p>Instalar na máquina virtual</p>:
 
 ``` bash
-//Download do binário
-sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+#Download do binário
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
-//Permissão para executar o binário
-sudo chmod +x /usr/local/bin/docker-compose
+#Permissão para executar o binário
+$ sudo chmod +x /usr/local/bin/docker-compose
 
-//Checar a versão
-docker-compose --version
+#Checar a versão
+$ docker-compose --version
 ```
 
 <a href="https://linuxize.com/">Referência para instalação no Site Linuxize.</a>
@@ -184,12 +184,12 @@ docker-compose --version
 
 <p>Estas são as entidades que serão utilizadas para o desensvolvimento da aplicação:</p>
 <ul>
-<li>Categorias</li>
-<li>Jogadores</li>
-<li>Desafios</li>
-<li>Partidas</li>
-<li>Rankings</li>
-<li>Notificações</li>
+<li>Categorias;</li>
+<li>Jogadores;</li>
+<li>Desafios;</li>
+<li>Partidas;</li>
+<li>Rankings;</li>
+<li>Notificações.</li>
 </ul>
 
 ## Criar Projeto
@@ -197,7 +197,7 @@ docker-compose --version
 <p>Comando para criar o projeto, e logo em seguida selecionar npm:</p>
 
 ``` bash
-nest new api-smartranking
+$ nest new api-smartranking
 ```
 
 <p>Dentro do diretório src foi excluido os seguins itens:</p>
@@ -212,7 +212,7 @@ nest new api-smartranking
 <p>Executar o comando:</p> 
 
 ``` bash
-npm run start:dev
+$ npm run start:dev
 ```
 
 <p>O cli vai retornar com erro devido as exclusões acima.</p> 
@@ -226,11 +226,11 @@ npm run start:dev
 <p>Instalações necessárias:</p>
 
 ``` bash
-//Gerar id para ser utilizado no MongoDb
-npm install uuid
+#Gerar id para ser utilizado no MongoDb
+$ npm install uuid
 
-//Mongoose
-npm install @nestjs/mongoose mongoose
+#Mongoose
+$ npm install @nestjs/mongoose mongoose
 ```
 
 ## Container
@@ -244,20 +244,20 @@ npm install @nestjs/mongoose mongoose
 <p>Comandos:</p>
 
 ``` bash
-//Para criar os containers
-docker-compose up -d --build
+#Para criar os containers
+$ docker-compose up -d --build
 
-//Para excluir os containers
-docker-compose down
+#Para excluir os containers
+$ docker-compose down
 
-//Para visualizar os container em execução (status UP)
-docker-compose ps
+#Para visualizar os container em execução (status UP)
+$ docker-compose ps
 
-//Para visualizar as imagens
-docker-compose images
+#Para visualizar as imagens
+$ docker-compose images
 
-//Caso ocorra problemas para construir o container
-docker-compose logs
+#Caso ocorra problemas para construir o container
+$ docker-compose logs
 ```
 
 
@@ -272,9 +272,9 @@ docker-compose logs
 <p>Criar arquivos:</p>
 
 ``` bash
-mkdir src/jogadores/interfaces
-touch jogador.interface.ts
-touch jogador.schema.ts
+$ mkdir src/jogadores/interfaces
+$ touch jogador.interface.ts
+$ touch jogador.schema.ts
 ```
 
 
@@ -285,8 +285,8 @@ touch jogador.schema.ts
 <p>São os dados informados pelos usuários, nem todos os campos da Interface Jogador serão informados pelo Usuário. A ideia do DTO que ele transporte somnete o que usuário for informar.</p>
 
 ``` bash
-mkdir src/jogadores/dtos
-touch criar-jogador.dtos.ts
+$ mkdir src/jogadores/dtos
+$ touch criar-jogador.dtos.ts
 ```
 
 
@@ -299,7 +299,7 @@ touch criar-jogador.dtos.ts
 <p>Será injetado o módulo Jogadores no arquivo "src >> app.module.ts".</p>
 
 ``` bash
-nest g module jogadores
+$ nest g module jogadores
 ```
 
 ### Controller
@@ -311,14 +311,14 @@ nest g module jogadores
 <p>A classe Controller será injetada no Modulo Jogadores.</p>
 
 ``` bash
-nest g controller jogadores
+$ nest g controller jogadores
 ```
 
 <p>Excluir o arquivo:</p>
 
 ``` bash
-cd src/jogadores
-rm jogadores.controller.spec.ts
+$ cd src/jogadores
+$ rm jogadores.controller.spec.ts
 ```
 
 <p>Alterado o endpoint na classe Controller:</p>
@@ -336,7 +336,7 @@ rm jogadores.controller.spec.ts
 <p>O Service é injetado no Module Jogadores.</p>
 
 ``` bash
-nest g service jogadores
+$ nest g service jogadores
 ```
 
 ### EndPoint
