@@ -31,7 +31,7 @@
 * [Dominio](#dominio)
 * [Criar Projeto](#criar-projeto)
 * [Dependências](#dependências)
-* [Entidades Jogadores](#entidades-jogadores)  
+* [Entidade Jogadores](#entidade-jogadores)  
   - [Interface](#interface)
   - [Dto](#dto)
   - [Module](#module)
@@ -254,6 +254,8 @@ docker-compose logs
 
 ### Interface
 
+<p>Diretório do Projeo: <b>src >> jogadores >> interfaces </b></p>
+
 <p>É a representação da tabela no MongoDB.</p>
 
 <p>Criar arquivos:</p>
@@ -267,6 +269,8 @@ touch jogador.schema.ts
 
 ### Dto
 
+<p>Diretório do Projeo: <b>src >> jogadores >> dtos </b></p>
+
 <p>São os dados informados pelos usuários, nem todos os campos da Interface Jogador serão informados pelo Usuário. A ideia do DTO que ele transporte somnete o que usuário for informar.</p>
 
 ``` bash
@@ -277,9 +281,11 @@ touch criar-jogador.dtos.ts
 
 ### Module
 
-<p>O comando irá ira criar um arquivo do tipo TypeScript jogadores.module.ts no diretório "src >> jogadores".</p>
+<p>Diretório do Projeo: <b>src >> jogadores </b></p>
 
-<p>Será injetado o módulo Jogadores no arquivo app.module.ts.</p>
+<p>O comando irá ira criar o arquivo <b>jogadores.module.ts</b>.</p>
+
+<p>Será injetado o módulo Jogadores no arquivo "src >> app.module.ts".</p>
 
 ``` bash
 nest g module jogadores
@@ -287,7 +293,10 @@ nest g module jogadores
 
 ### Controller
 
+<p>Diretório do Projeo: <b>src >> jogadores </b></p>
+
 <p>O controller tratar as requisições HTTP.</p>
+
 <p>A classe Controller será injetada no Modulo Jogadores.</p>
 
 ``` bash
@@ -308,6 +317,8 @@ rm jogadores.controller.spec.ts
 ```
 
 ### Service
+
+<p>Diretório do Projeo: <b>src >> jogadores </b></p>
 
 <p>Service é um Provider pois a classe será anotada com o decorator <b>@Injectable</b>.</P>
 <P>O Service irá receber requisições do Controller.</p>
