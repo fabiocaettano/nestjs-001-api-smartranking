@@ -231,10 +231,13 @@ $ npm install uuid
 
 #Mongoose
 $ npm install @nestjs/mongoose mongoose
+
+#Class-Validator e Class-Transformer
+$ npm install class-validador class-transformer
 ```
 
 ## Container
-
+ 
 <p>O arquivo <b>Dockerfile</b> criará uma imagem do node-alpine.</p>
 
 <p>O arquivo <b>docker-compose</b> irá construir 02 containers.</p>
@@ -344,7 +347,7 @@ $ nest g service jogadores
 <p>Subir aplicação:</p>
 
 ``` sh
-$ npm run start:dev
+$ docker-composer up -d
 ```
 
 <p>Executar endpoint no Insomnia:</p>
